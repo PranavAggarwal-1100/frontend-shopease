@@ -21,7 +21,7 @@ const kOffWhite = Color(0xffF3F4F8);
 double height = 926.h;
 double width = 428.w;
 
-const String appBaseUrl = "";
+const String appBaseUrl = "localhost:4321";
 
 List<String> orderlist = [
   "New Orders",

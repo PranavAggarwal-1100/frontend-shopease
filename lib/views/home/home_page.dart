@@ -47,6 +47,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             SizedBox(
               height: 15.h,
             ),
+            
             const HomeTiles(),
 
             SizedBox(

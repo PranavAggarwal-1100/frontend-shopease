@@ -27,7 +27,7 @@ class _AddFoodsState extends State<AddFoods> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ReusableText(text: "Welcome to Restaurant Panel", 
-            style: appStyle(14, kLightWhite, FontWeight.w600)),
+            style: appStyle(14, kLightWhite, FontWeight.bold)),
             ReusableText(text: "Fill All the Required information to add food items", 
             style: appStyle(12, kLightWhite, FontWeight.normal)),
           ],
@@ -40,9 +40,17 @@ class _AddFoodsState extends State<AddFoods> {
             height: height,
             child: PageView(
               controller: _pageController,
+              physics: const NeverScrollableScrollPhysics(),
               pageSnapping: false,
               children: [
-                ChooseCategory(),
+                ChooseCategory(
+                  next: () {
+                    _pageController.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeIn,
+                    );
+                  },
+                ),
               ],
             ),
           )
